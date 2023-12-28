@@ -6,6 +6,7 @@ from django.http import HttpResponse
 
 from django.shortcuts import render
 
+
 # command_btn1 = "Get-VM | where {$_.State -eq 'Off'}"
 command_btn2 = "ls"
 script_path = "D:\\YUANYE\\project\\YJY\\p1.ps1"
@@ -22,6 +23,7 @@ def button1(request):
     # 'powershell' 是调用PowerShell的命令
     # '-Command' 后面跟要执行的PowerShell命令
     result = subprocess.run(command, capture_output=True, text=True)
+
 
     # 打印命令输出
     response = result.stdout
